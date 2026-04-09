@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para ti</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header class="masthead">
+      <span class="masthead-logo">Para ti, gorda</span>
+      <span class="masthead-heart">💙</span>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Todo<br />lo nuestro 💙</h1>
+        <p>Cada foto, cada canción, cada momento contigo.</p>
+      </div>
+
+      <div class="hero-photo">
+        <img src="img/Fondo.jpeg" />
+      </div>
+    </section>
+
+    <section class="stories">
+      <article class="story" id="btn-galeria">
+        <img src="img/portadaViajeCordoba.jpeg" />
+        <h2>Nuestro viaje 💙</h2>
+      </article>
+
+      <article class="story" id="btn-video">
+        <img src="img/portadaVideo.jpeg" />
+        <h2>Nuestro vídeo 💙</h2>
+      </article>
+
+      <article class="story" id="btn-spotify">
+        <img src="img/portadaSpotify.jpeg" />
+        <h2>Nuestra música 💙</h2>
+      </article>
+
+      <article class="story" id="btn-textos">
+        <img src="img/portadaTextos.jpeg" />
+        <h2>Lo que te escribo 💙</h2>
+      </article>
+    </section>
+
+    <footer>
+      <p>Siempre tuyo 💙</p>
+    </footer>
+
+    <!-- ═════ MODAL GALERÍA ═════ -->
+    <div class="modal-bg" id="modal-galeria">
+      <div class="modal">
+        <button onclick="closeModal('modal-galeria')">Cerrar</button>
+        <div class="gallery" id="galeriaFotos"></div>
+      </div>
+    </div>
+
+    <div class="modal-bg" id="modal-textos">
+      <div class="letters-shell">
+        <!-- BOTÓN CERRAR TODO -->
+        <button class="close-fixed" onclick="closeModal('modal-textos')">
+          ✕
+        </button>
+
+        <!-- LISTA DE MESES -->
+        <div id="letters-menu">
+          <h2>💌 Tus cartas</h2>
+
+          <div class="letters-grid">
+            <button onclick="openLetter(1)">💙 Mes 1</button>
+            <button onclick="openLetter(2)">💙 Mes 2</button>
+            <button onclick="openLetter(3)">💙 Mes 3</button>
+            <button onclick="openLetter(4)">💙 Mes 4</button>
+            <button onclick="openLetter(5)">💙 Mes 5</button>
+            <button onclick="openLetter(6)">💙 Mes 6</button>
+            <button onclick="openLetter(7)">💙 Mes 7</button>
+          </div>
+        </div>
+
+        <!-- CARTA INDIVIDUAL -->
+        <div id="letter-view" class="letter-view hidden">
+          <div class="letter-topbar">
+            <button onclick="backToMenu()">← Volver</button>
+            <button onclick="closeModal('modal-textos')">Cerrar ✕</button>
+          </div>
+
+          <div class="letter-box" id="letter-box">
+            <!-- contenido dinámico -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
